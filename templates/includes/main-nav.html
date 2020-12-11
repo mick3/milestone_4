@@ -16,9 +16,9 @@
                 Comics &amp; Graphic Novels
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="books-link">
-                <a href="" class="dropdown-item">Comic Books</a>
-                <a href="" class="dropdown-item">Graphic Novels</a>
-                <a href="" class="dropdown-item">All Items</a>
+                <a href="{% url 'products' %}?category=comics" class="dropdown-item">Comic Books</a>
+                <a href="{% url 'products' %}?category=graphic_novels" class="dropdown-item">Graphic Novels</a>
+                <a href="{% url 'products' %}?category=comics, graphic_novels" class="dropdown-item">All Items</a>
             </div>
         </li>
 
@@ -27,9 +27,9 @@
                 Collectibles
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="collectibles-link">
-                <a href="" class="dropdown-item">Signed Items</a>
-                <a href="" class="dropdown-item">Vintage Collectibles</a>
-                <a href="" class="dropdown-item">All Collectibles</a>
+                <a href="{% url 'products' %}?category=signed_collectibles" class="dropdown-item">Signed Collectibles</a>
+                <a href="{% url 'products' %}?category=vintage_collectibles" class="dropdown-item">Vintage Collectibles</a>
+                <a href="{% url 'products' %}?category=signed_collectibles, vintage_collectibles" class="dropdown-item">All Collectibles</a>
             </div>
         </li>
 
@@ -38,10 +38,10 @@
                 Trading Cards
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="cards-link">
-                <a href="" class="dropdown-item">Signed Cards</a>
-                <a href="" class="dropdown-item">Vintage Cards</a>
-                <a href="" class="dropdown-item">All Cards</a>
-                <a href="" class="dropdown-item">New Cards</a>
+                <a href="{% url 'products' %}?category=signed_cards" class="dropdown-item">Signed Cards</a>
+                <a href="{% url 'products' %}?category=vintage_cards" class="dropdown-item">Vintage Cards</a>
+                <a href="{% url 'products' %}?category=new_cards" class="dropdown-item">New Cards</a>
+                <a href="{% url 'products' %}?category=signed_cards, vintage_cards, new_cards" class="dropdown-item">All Cards</a>
             </div>
         </li>
 
@@ -50,10 +50,8 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
             </div>
         </li>
     </ul>
