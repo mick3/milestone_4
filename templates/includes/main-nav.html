@@ -16,9 +16,9 @@
                 Comics &amp; Graphic Novels
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="books-link">
-                <a href="{% url 'products' %}?category=comics" class="dropdown-item">Comic Books</a>
+                <a href="{% url 'products' %}?category=comic_books" class="dropdown-item">Comic Books</a>
                 <a href="{% url 'products' %}?category=graphic_novels" class="dropdown-item">Graphic Novels</a>
-                <a href="{% url 'products' %}?category=comics, graphic_novels" class="dropdown-item">All Items</a>
+                <a href="{% url 'products' %}?category=comic_books,graphic_novels" class="dropdown-item">All Items</a>
             </div>
         </li>
 
@@ -29,7 +29,7 @@
             <div class="dropdown-menu border-0" aria-labelledby="collectibles-link">
                 <a href="{% url 'products' %}?category=signed_collectibles" class="dropdown-item">Signed Collectibles</a>
                 <a href="{% url 'products' %}?category=vintage_collectibles" class="dropdown-item">Vintage Collectibles</a>
-                <a href="{% url 'products' %}?category=signed_collectibles, vintage_collectibles" class="dropdown-item">All Collectibles</a>
+                <a href="{% url 'products' %}?category=signed_collectibles,vintage_collectibles" class="dropdown-item">All Collectibles</a>
             </div>
         </li>
 
@@ -41,7 +41,7 @@
                 <a href="{% url 'products' %}?category=signed_cards" class="dropdown-item">Signed Cards</a>
                 <a href="{% url 'products' %}?category=vintage_cards" class="dropdown-item">Vintage Cards</a>
                 <a href="{% url 'products' %}?category=new_cards" class="dropdown-item">New Cards</a>
-                <a href="{% url 'products' %}?category=signed_cards, vintage_cards, new_cards" class="dropdown-item">All Cards</a>
+                <a href="{% url 'products' %}?category=signed_cards,vintage_cards,new_cards" class="dropdown-item">All Cards</a>
             </div>
         </li>
 
