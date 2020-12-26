@@ -55,18 +55,17 @@ def adjust_bag(request, item_id):
 
 def remove_from_bag(request, item_id):
     """Remove the item from the shopping bag"""
-
+    bag = request.session['bag']
     try:
         product = get_object_or_404(Product, pk=item_id)
-
-        if item_id > 0:
-            remove_from_bag.pop(item_id)
+        if item_id == 0:
+            bag.pop(item_id)
             messages.success(request, f'Removed {product.name} from your bag')
-
         request.session['bag'] = bag
         return HttpResponse(status=200)
-
+    
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
 
+print('this view is called')
