@@ -58,12 +58,19 @@ def remove_from_bag(request, item_id):
     bag = request.session['bag']
     try:
         product = get_object_or_404(Product, pk=item_id)
-        if item_id == 0:
-            bag.pop(item_id)
-            messages.success(request, f'Removed {product.name} from your bag')
+        quantity = int(request.POST.get('quantity'))
+        bag = request.session.get('bag', {})
+        if item_id in list(bag.keys()):
+            bag[item_id] = quantity
+        else:
+            if quantity > 0:
+                bag[item_id]['quantity'] = quantity
+            else:
+                del bag.pop[item_id]['quantity']
+
         request.session['bag'] = bag
-        return HttpResponse(status=200)
-    
+        return redirect(reverse('view_bag'))
+
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
