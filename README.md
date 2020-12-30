@@ -1,5 +1,9 @@
 # Milestone 4 | Geezer.com 
 
+##### Geezer.com Concept
+I had the idea for Geezer.com when I thought of someone who is in their 30's who shops on their computer for 
+hobby buys.
+
 ##### What does it do and what does it need to fulfill?
 This Milestone Project serves as the completion of the Full Stack
 Web Developer Course offered by Code Institute.
@@ -77,3 +81,15 @@ Both are available in the main files as:
 * Bootstrap's <a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/#js">Imported Javascript & JQuery</a> ~ For the Modal and Responsive Navbar expand & collapse functionality.
 * <a href="https://git-scm.com/">Git</a> ~ Installed on local device and integrated to PyCharm as a Plugin to enable version controlling.
 * <a href="https://www.heroku.com/">Heroku</a> ~ A cloud platform as a service enabling deployment for this CRUD application.
+
+###### Acknowledgements:
+The Boutique Ado example application was used very closely in the development of this application. I want to thank my Mentor Ignatius Ukwuoma for his help 
+with this project and all of my other projects. Also, I'd like to thank Tutor help for helping me troubleshoot my
+projects. 
+
+##### Features left to implement (Bugs):
+I still have a problem with getting the 'remove from bag' function to work. I have worked endlessly on it
+but it doesn't seem that I have figured out the answer to make it work.
+Removing an item from the bag only works if you click 'remove' then browse
+to a different page. Then, only then, does it remove the item from the cart.
+

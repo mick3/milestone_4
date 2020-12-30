@@ -55,22 +55,13 @@ def adjust_bag(request, item_id):
 
 def remove_from_bag(request, item_id):
     """Remove the item from the shopping bag"""
-    bag = request.session['bag']
-    try:
-        product = get_object_or_404(Product, pk=item_id)
-        quantity = int(request.POST.get('quantity'))
-        bag = request.session.get('bag', {})
-        if item_id in list(bag.keys()):
-            bag[item_id] = quantity
-        else:
-            if quantity > 0:
-                bag[item_id]['quantity'] = quantity
-            else:
-                del bag.pop[item_id]['quantity']
+    print("remove_from_bag function is called")
+    print(f"item_id is {item_id}")
+    product = get_object_or_404(Product, pk=item_id)
+    bag = request.session.get('bag', {})
+    bag.pop(item_id)
+    messages.success(request, f'Removed {product.name} from your bag')
 
-        request.session['bag'] = bag
-        return redirect(reverse('view_bag'))
-
-    except Exception as e:
-        messages.error(request, f'Error removing item: {e}')
-        return HttpResponse(status=500)
+    request.session['bag'] = bag
+    return HttpResponse(status=200)
+    return redirect(redirect_url)
