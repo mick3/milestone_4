@@ -26,7 +26,7 @@ SECRET_KEY = '74+si1kksg)--c$3k@i$mtxue9qxzna%_h6r5n20gsr^3nd$_9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['milestone-4-mvwebber.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['milestone-4-michael-webber.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -120,7 +120,13 @@ WSGI_APPLICATION = 'milestone_4.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+
+    }
+else:
+    DATABASES = {
        'default': {
          'ENGINE': 'django.db.backends.sqlite3',
          'NAME': BASE_DIR / 'db.sqlite3',
