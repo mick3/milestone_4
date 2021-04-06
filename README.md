@@ -85,7 +85,7 @@ Both are available in the main files as:
 ###### Acknowledgements:
 The Boutique Ado example application was used very closely in the development of this application. I want to thank my Mentor Ignatius Ukwuoma for his help 
 with this project and all of my other projects. Also, I'd like to thank Tutor help for helping me troubleshoot my
-projects. 
+projects. The CSS and javascript used in the project were taken from the Full Stack Mini Project Boutique Ado.
 
 ##### Features left to implement (Bugs):
 I still have a problem with getting the 'remove from bag' function to work. I have worked endlessly on it
