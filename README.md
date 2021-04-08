@@ -93,3 +93,6 @@ but it doesn't seem that I have figured out the answer to make it work.
 Removing an item from the bag only works if you click 'remove' then browse
 to a different page. Then, only then, does it remove the item from the cart.
 
+#### Testing
+04/05/2021: I was able to fix the search feature, allowing a user to search for an item. This meant taking some code out of 
+templates/base.html (main-nav.html and mobile-top-header.html) out of the main search area in the code. 
