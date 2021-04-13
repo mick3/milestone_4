@@ -96,3 +96,8 @@ to a different page. Then, only then, does it remove the item from the cart.
 #### Testing
 04/05/2021: I was able to fix the search feature, allowing a user to search for an item. This meant taking some code out of 
 templates/base.html (main-nav.html and mobile-top-header.html) out of the main search area in the code. 
+
+04/13/2021: When attempting to delete an item from the bag, the user was not notified of a removed bag item after having updated
+the bag until the page is refreshed. At the bottom of the bag.html file, there is a script file that runs to update the quantity in the 
+bag. It was removing the item on the back end but not immediately on the front-end (item removed from bag was not posting to the front-end).
+I added $.post(url, data) .done(function() { location.reload();}); to the script and it fixed the problem. 

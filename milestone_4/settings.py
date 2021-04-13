@@ -28,6 +28,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['milestone-4-michael-webber.herokuapp.com', 'localhost']
 
+APPEND_SLASH=False
 
 # Application definition
 
