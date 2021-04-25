@@ -87,11 +87,8 @@ The Boutique Ado example application was used very closely in the development of
 with this project and all of my other projects. Also, I'd like to thank Tutor help for helping me troubleshoot my
 projects. The CSS and javascript used in the project were taken from the Full Stack Mini Project Boutique Ado.
 
-##### Features left to implement (Bugs):
-I still have a problem with getting the 'remove from bag' function to work. I have worked endlessly on it
-but it doesn't seem that I have figured out the answer to make it work.
-Removing an item from the bag only works if you click 'remove' then browse
-to a different page. Then, only then, does it remove the item from the cart.
+##### Featues left to implement 
+The categorization feature of products does not work, I'd like to fix that.
 
 #### Testing
 04/05/2021: I was able to fix the search feature, allowing a user to search for an item. This meant taking some code out of 
@@ -100,4 +97,6 @@ templates/base.html (main-nav.html and mobile-top-header.html) out of the main s
 04/13/2021: When attempting to delete an item from the bag, the user was not notified of a removed bag item after having updated
 the bag until the page is refreshed. At the bottom of the bag.html file, there is a script file that runs to update the quantity in the 
 bag. It was removing the item on the back end but not immediately on the front-end (item removed from bag was not posting to the front-end).
-I added $.post(url, data) .done(function() { location.reload();}); to the script and it fixed the problem. Test
+I added $.post(url, data) .done(function() { location.reload();}); to the script and it fixed the problem.
+
+The card numbers used to test the Credit Card functionality were taken from here. https://stripe.com/docs/testing
