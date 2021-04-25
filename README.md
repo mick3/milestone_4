@@ -24,6 +24,8 @@ was used for this e-commerce website. Sample/Test credit card numbers can
 be used when utilizing <a href="https://stripe.com/docs/testing#cards">this</a>
 site.
 
+##### Font chosen: I used Roboto and sans-serif for any time Roboto wasn't available. Its a modern, crisp typeface that pairs well with Archvio, Lora, Rokkit, Nunito, Raleway and Space Mono.
+
 #### User Stories 
 _Generic (unregistered site user) User:
 As a generic user...
